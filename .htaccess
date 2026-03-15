@@ -7,6 +7,7 @@ AddType application/manifest+json .webmanifest
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  RewriteRule ^powerbi/calendar-heatmap-pro/privacy/?$ /powerbi/calendar-heatmap-pro/privacy.html [L]
   RewriteRule ^industrial-sketch\.webp$ https://buczek.uk/img/industrial-sketch.webp [R=301,L]
 
   RewriteCond %{HTTPS} !=on [OR]
