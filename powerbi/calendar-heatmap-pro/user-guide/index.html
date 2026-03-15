@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calendar Heatmap Pro User Guide</title>
+    <meta name="description" content="User guide for Calendar Heatmap Pro for Power BI: setup, field mapping, views, formatting, licensing tiers, and troubleshooting.">
+    <meta name="theme-color" content="#f4efe6">
+    <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+    <div class="site-shell">
+        <div class="grain" aria-hidden="true"></div>
+        <header class="topbar">
+            <div class="container">
+                <div class="topbar-inner">
+                    <a class="brand" href="../">
+                        <span class="brand-mark" aria-hidden="true">CH</span>
+                        <span>
+                            <span class="brand-kicker">Documentation</span>
+                            <span class="brand-title">Calendar Heatmap Pro User Guide</span>
+                        </span>
+                    </a>
+                    <nav class="nav-links" aria-label="Primary">
+                        <a class="nav-link" href="../">Product page</a>
+                        <a class="nav-link" href="https://buczek.uk/powerbi/calendar-heatmap-pro/support">Support</a>
+                        <a class="nav-link" href="https://buczek.uk/powerbi/calendar-heatmap-pro/privacy">Privacy</a>
+                        <a class="nav-link" href="https://buczek.uk/powerbi/calendar-heatmap-pro/eula">EULA</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="page-hero">
+                <div class="container">
+                    <div class="page-hero-panel">
+                        <div class="breadcrumbs">
+                            <a href="../">Calendar Heatmap Pro</a>
+                            <span>/</span>
+                            <span>User guide</span>
+                        </div>
+                        <p class="eyebrow">Step-by-step usage</p>
+                        <h1>Build the report shape first. Then tune the details.</h1>
+                        <p>This guide covers the practical path: add the required fields, select the right time view, refine formatting, understand tier limits, and troubleshoot the most common Power BI setup issues.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container guide-layout">
+                    <aside class="guide-nav" aria-label="Guide contents">
+                        <h2>On this page</h2>
+                        <ol class="toc-list">
+                            <li><a href="#quick-start">Quick start</a></li>
+                            <li><a href="#field-roles">Field roles</a></li>
+                            <li><a href="#views">Views and navigation</a></li>
+                            <li><a href="#formatting">Formatting controls</a></li>
+                            <li><a href="#tooltips">Tooltips and categories</a></li>
+                            <li><a href="#licensing">Licensing tiers</a></li>
+                            <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        </ol>
+                    </aside>
+
+                    <div class="guide-main">
+                        <section class="guide-section" id="quick-start">
+                            <p class="eyebrow">Quick start</p>
+                            <h2>1. First useful render</h2>
+                            <ol class="step-list">
+                                <li><strong>Add the visual to the report canvas.</strong><span class="muted">The visual requires a date field to render.</span></li>
+                                <li><strong>Populate the <span class="inline-code">Date</span> role.</strong><span class="muted">This is the only mandatory field.</span></li>
+                                <li><strong>Add one or more value fields.</strong><span class="muted">You can use up to five measures.</span></li>
+                                <li><strong>Start in month or year view.</strong><span class="muted">These views usually validate data shape fastest.</span></li>
+                                <li><strong>Use the navigation bar to move across time.</strong><span class="muted">The visual supports multi-year, year, quarter, month, week, day, and hour navigation.</span></li>
+                            </ol>
+                            <div class="mini-grid">
+                                <div class="mini-card">
+                                    <strong>Best first check</strong>
+                                    <p>If the visual is empty, confirm that the date field is bound and contains valid dates.</p>
+                                </div>
+                                <div class="mini-card">
+                                    <strong>Best second check</strong>
+                                    <p>If the shape looks wrong, switch views before changing formatting.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="guide-section" id="field-roles">
+                            <p class="eyebrow">Field roles</p>
+                            <h2>2. What goes where</h2>
+                            <ul class="checklist">
+                                <li><strong>Date</strong><span class="muted">Required. The visual uses it to place values into day, week, month, quarter, year, and hour buckets.</span></li>
+                                <li><strong>Value</strong><span class="muted">Optional but usually essential. You can add up to five measures.</span></li>
+                                <li><strong>Category</strong><span class="muted">Optional. Useful when you want grouped context or category-aware tooltips.</span></li>
+                                <li><strong>Tooltips</strong><span class="muted">Optional. Add extra fields for hover and focus detail.</span></li>
+                                <li><strong>Tooltip Custom</strong><span class="muted">Optional. Use this when you want more control over tooltip field visibility and ordering.</span></li>
+                            </ul>
+                            <p>Recommended starting point: <span class="inline-code">Date + one Value</span>. Add category and tooltip fields only after the visual already tells the core story.</p>
+                        </section>
+
+                        <section class="guide-section" id="views">
+                            <p class="eyebrow">Views and navigation</p>
+                            <h2>3. Choose the time grain that matches the question</h2>
+                            <div class="mini-grid">
+                                <div class="mini-card"><strong>Multi-year</strong><p>Use for long-term trend memory and paging across historical windows.</p></div>
+                                <div class="mini-card"><strong>Year</strong><p>Use for annual pattern scanning, seasonality, and broad anomaly discovery.</p></div>
+                                <div class="mini-card"><strong>Quarter</strong><p>Use when reporting cadence aligns with quarterly planning or business reviews.</p></div>
+                                <div class="mini-card"><strong>Month</strong><p>Choose summary or calendar mode depending on whether shape or exact day placement matters more.</p></div>
+                                <div class="mini-card"><strong>Week</strong><p>Useful for operational reporting, shift patterns, and recurring weekly routines.</p></div>
+                                <div class="mini-card"><strong>Day and hour</strong><p>Use for density within a single day, spikes, and hour-of-day concentration.</p></div>
+                            </div>
+                            <p>The navigation bar can run in <span class="inline-code">off</span>, <span class="inline-code">minimal</span>, <span class="inline-code">full</span>, or <span class="inline-code">auto</span> mode. For most reports, <span class="inline-code">auto</span> is the safest default.</p>
+                        </section>
+
+                        <section class="guide-section" id="formatting">
+                            <p class="eyebrow">Formatting</p>
+                            <h2>4. Tune the signal, not just the colors</h2>
+                            <ul class="checklist">
+                                <li><strong>Colors</strong><span class="muted">Set min, mid, max, and no-data colors. Use month-context scaling only when local contrast matters more than global comparability.</span></li>
+                                <li><strong>Legend</strong><span class="muted">Switch between linear, log, quantile, and custom thresholds depending on data distribution.</span></li>
+                                <li><strong>Labels</strong><span class="muted">Control month, weekday, tile, year, quarter, week, day, and hour typography separately.</span></li>
+                                <li><strong>Week setup</strong><span class="muted">Choose ISO, Sunday-based, or fiscal week numbering to match the business calendar.</span></li>
+                                <li><strong>Interaction</strong><span class="muted">Tile click behavior can favor drill, range selection, or smart behavior depending on the report design.</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="guide-section" id="tooltips">
+                            <p class="eyebrow">Tooltips and categories</p>
+                            <h2>5. Add context without making the canvas heavy</h2>
+                            <p>Tooltip fields are best used for dimensions or descriptive values that would be too expensive to render directly on the canvas. Category fields are useful when the viewer needs to understand who or what contributed to a specific cell.</p>
+                            <ul class="checklist">
+                                <li><strong>Use categories for grouped reasoning.</strong><span class="muted">For example: team, region, product family, or status band.</span></li>
+                                <li><strong>Use tooltip fields for detail on demand.</strong><span class="muted">For example: exact values, labels, owner, SLA, or comparison notes.</span></li>
+                                <li><strong>Keep tooltip content selective.</strong><span class="muted">If everything appears in the tooltip, nothing feels important.</span></li>
+                            </ul>
+                        </section>
+
+                        <section class="guide-section" id="licensing">
+                            <p class="eyebrow">Licensing</p>
+                            <h2>6. Understand the tier behavior before rollout</h2>
+                            <div class="tier-list">
+                                <div class="tier-item">
+                                    <span class="tier-label tier-free">FREE</span>
+                                    <strong>Up to 200 rows</strong>
+                                    <span class="muted">Best for evaluation and small reports. When data exceeds the limit, the visual surfaces an upgrade path.</span>
+                                </div>
+                                <div class="tier-item">
+                                    <span class="tier-label tier-pro">PROFESSIONAL</span>
+                                    <strong>Up to 100000 rows</strong>
+                                    <span class="muted">Designed for production usage. When the report exceeds this level, the visual can prompt the Enterprise path.</span>
+                                </div>
+                                <div class="tier-item">
+                                    <span class="tier-label tier-ent">ENTERPRISE</span>
+                                    <strong>Unlimited rows</strong>
+                                    <span class="muted">Use when row ceilings are unacceptable for the report audience or operating scale.</span>
+                                </div>
+                            </div>
+                            <p>The AppSource build uses Microsoft host-managed licensing. It does not call an external licensing API for entitlement checks.</p>
+                        </section>
+
+                        <section class="guide-section" id="troubleshooting">
+                            <p class="eyebrow">Troubleshooting</p>
+                            <h2>7. Common issues and what to check first</h2>
+                            <ul class="checklist">
+                                <li><strong>The visual is blank.</strong><span class="muted">Check that a valid date field is assigned and that the report has data after filters are applied.</span></li>
+                                <li><strong>The visual seems truncated.</strong><span class="muted">Check the active licensing tier and row limits. FREE and PROFESSIONAL have capacity ceilings.</span></li>
+                                <li><strong>The wrong time grouping is visible.</strong><span class="muted">Verify the active view and week mode before changing data preparation.</span></li>
+                                <li><strong>Colors feel misleading.</strong><span class="muted">Review the legend scale mode and any custom thresholds.</span></li>
+                                <li><strong>Tooltip content is noisy.</strong><span class="muted">Reduce tooltip fields and keep only those that help interpret a selected cell.</span></li>
+                            </ul>
+                            <p>If the issue is environment-specific, use the support page and include the Power BI environment, visual version, active tier, sample shape of the data, and a clear description of expected versus actual behavior.</p>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container cta-band">
+                    <p class="eyebrow" style="color: rgba(255, 243, 222, 0.74);">Need more help?</p>
+                    <h2>Use the guide for setup. Use support for edge cases.</h2>
+                    <p>The fastest support requests include the Power BI environment, visual version, active view, licensing tier, and a short note about what changed.</p>
+                    <div class="cta-actions">
+                        <a class="button button-primary" href="https://buczek.uk/powerbi/calendar-heatmap-pro/support">Open support</a>
+                        <a class="button button-secondary" href="../">Back to product page</a>
+                        <a class="button button-ghost" href="https://buczek.uk/powerbi/calendar-heatmap-pro/privacy">Privacy</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-panel">
+                    <p>Calendar Heatmap Pro user guide for Power BI report authors and administrators.</p>
+                    <div class="footer-links">
+                        <a href="../">Product page</a>
+                        <a href="https://buczek.uk/powerbi/calendar-heatmap-pro/support">Support</a>
+                        <a href="https://buczek.uk/powerbi/calendar-heatmap-pro/privacy">Privacy</a>
+                        <a href="https://buczek.uk/powerbi/calendar-heatmap-pro/eula">EULA</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
