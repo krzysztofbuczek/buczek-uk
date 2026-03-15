@@ -1,11 +1,12 @@
 AddDefaultCharset UTF-8
 DirectoryIndex index.html
 AddType image/svg+xml .svg
+AddType image/x-icon .ico
+AddType application/manifest+json .webmanifest
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  RewriteRule ^favicon\.ico$ https://buczek.uk/favicon.svg [R=301,L]
   RewriteRule ^industrial-sketch\.webp$ https://buczek.uk/img/industrial-sketch.webp [R=301,L]
 
   RewriteCond %{HTTPS} !=on [OR]
