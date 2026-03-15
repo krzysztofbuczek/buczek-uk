@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <title>Support | Calendar Heatmap Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Support information for Calendar Heatmap Pro, the Power BI custom visual published by Krzysztof Buczek Engineering."
+  />
+  <link rel="canonical" href="https://buczek.uk/powerbi/calendar-heatmap-pro/support" />
+  <meta name="theme-color" content="#0b2545" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <style>
+    :root {
+      --bg: #f5f7fa;
+      --bg-alt: #ffffff;
+      --primary: #0b2545;
+      --primary-soft: #e6edf6;
+      --text-main: #1d252c;
+      --text-muted: #5b6673;
+      --border: #dde3eb;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(15, 35, 52, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url("/img/industrial-sketch.webp") center/contain no-repeat;
+      opacity: 0.04;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 48px auto;
+      background: var(--bg-alt);
+      padding: 42px 48px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .logo img {
+      display: block;
+      max-width: 240px;
+      margin: 0 auto;
+      height: auto;
+    }
+
+    .eyebrow {
+      margin-top: 0.5rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+
+    h1 {
+      margin-top: 0.65rem;
+      font-size: 2rem;
+      line-height: 1.15;
+      color: var(--primary);
+    }
+
+    .subtitle {
+      margin-top: 0.7rem;
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    .meta {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    section + section {
+      margin-top: 1.6rem;
+    }
+
+    h2 {
+      font-size: 0.88rem;
+      margin-bottom: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+    }
+
+    p,
+    li {
+      font-size: 0.97rem;
+      color: var(--text-main);
+    }
+
+    p + p,
+    p + ul,
+    ul + p {
+      margin-top: 0.7rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 0.35rem;
+    }
+
+    .panel {
+      background: var(--primary-soft);
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+
+    .links a {
+      display: inline-block;
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 0.55rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        margin: 24px 16px;
+        padding: 28px 22px;
+      }
+
+      h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="/img/logo.webp" alt="Buczek Engineering company logo" />
+      </div>
+      <p class="eyebrow">Calendar Heatmap Pro</p>
+      <h1>Support</h1>
+      <p class="subtitle">
+        Contact and troubleshooting information for the Calendar Heatmap Pro Power BI custom visual.
+      </p>
+      <p class="meta">Last updated: March 15, 2026</p>
+    </header>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <div class="panel">
+        <p>
+          For product support, contact
+          <a href="mailto:contact@buczek.uk">contact@buczek.uk</a>.
+        </p>
+        <p>
+          Please use the subject line <strong>Calendar Heatmap Pro Support</strong> so the request
+          can be triaged quickly.
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="scope">
+      <h2 id="scope">What This Support Page Covers</h2>
+      <p>
+        This page covers the AppSource-distributed build of Calendar Heatmap Pro for Power BI and
+        general product questions about visual behavior, formatting, licensing flow, and usage.
+      </p>
+      <p>
+        If you are using a separate private or enterprise build, include that in your message so
+        the request can be handled against the correct deployment.
+      </p>
+    </section>
+
+    <section aria-labelledby="include">
+      <h2 id="include">What To Include In A Support Request</h2>
+      <p>To help diagnose issues quickly, include as much of the following as possible:</p>
+      <ul>
+        <li>a short description of the issue and the expected behavior;</li>
+        <li>the Power BI environment involved, such as Desktop or Service;</li>
+        <li>the visual version, if visible in your environment;</li>
+        <li>steps to reproduce the issue;</li>
+        <li>screenshots or screen recordings where helpful; and</li>
+        <li>whether the problem affects one report or multiple reports.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="do-not-send">
+      <h2 id="do-not-send">Sensitive Data</h2>
+      <p>
+        Do not send raw datasets, secrets, passwords, license keys, or other confidential business
+        information unless explicitly requested and agreed through a secure channel.
+      </p>
+      <p>
+        If screenshots are required, redact sensitive fields before sharing them.
+      </p>
+    </section>
+
+    <section aria-labelledby="common-topics">
+      <h2 id="common-topics">Common Support Topics</h2>
+      <ul>
+        <li>data mapping and field-role setup;</li>
+        <li>calendar aggregation behavior and date interpretation;</li>
+        <li>formatting and color-scale configuration;</li>
+        <li>tooltip behavior and category display;</li>
+        <li>row-limit behavior by license tier in the AppSource build; and</li>
+        <li>Power BI host licensing behavior for the AppSource package.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="response">
+      <h2 id="response">Response And Handling</h2>
+      <p>
+        Support is handled on a reasonable-effort basis. Response times may vary depending on issue
+        complexity, reproducibility, and whether additional technical detail is needed.
+      </p>
+    </section>
+
+    <section aria-labelledby="related-links">
+      <h2 id="related-links">Related Links</h2>
+      <div class="links">
+        <a href="https://buczek.uk/powerbi/calendar-heatmap-pro/privacy">Privacy Policy</a>
+        <a href="https://buczek.uk/">Main Site</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Krzysztof Buczek Engineering</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
